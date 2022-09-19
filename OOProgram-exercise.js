@@ -85,7 +85,7 @@ class HouseCat extends Cat {
 
 class Tiger extends Cat {
     constructor(tigerSound = 'roar!', sound, canJumpHigh, CanClimbTrees, color, energy) {
-        super(color, energy, sound, canJumpHigh, CanClimbTrees);
+        super(sound, canJumpHigh, CanClimbTrees, color, energy);
         this.tigerSound = tigerSound;
     }
     makeSound() {
@@ -111,6 +111,7 @@ class Parrot extends Bird {
 }
 
 //Testing the code:
+
 var polly = new Parrot(true); // we're passing `true` to the constructor so that polly can talk
 var fiji = new Parrot(false); // we're passing `false` to the constructor so that fiji can't talk
 
@@ -130,3 +131,20 @@ console.log(penguin.canFly); // false
 console.log(penguin.color); // 'black and white'
 console.log(penguin.energy); // 200
 penguin.isActive(); // Energy is decreasing, currently at: 180
+
+var kitty = new Cat("MEOW", true, true, "orange", 200); // setting all the custom properties
+
+console.log(kitty); // Cat {color: 'orange', energy: 200, sound: 'MEOW', canJumpHigh: true, canClimbTrees: true }
+console.log(kitty.sound); // 'MEOW'
+console.log(kitty.canJumpHigh); // true
+console.log(kitty.canClimbTrees); // true
+console.log(kitty.color); // 'orange'
+kitty.isActive(); // Energy is decreasing, currently at: 180
+
+var houseCat = new HouseCat("meeeoooow!", "purr", true, true, "orange", 200); // setting all the custom properties
+
+console.log(houseCat); // HouseCat {color: 'orange', energy: 200, sound: 'purr', canJumpHigh: true, canClimbTrees: true, houseCatSound: 'meow' }
+
+var tiger = new Tiger("ROOOAAAR!", "purr", true, true, "orange", 200); // setting all the custom properties
+
+console.log(tiger); // Tiger {color: 'orange', energy: 200, sound: 'purr', canJumpHigh: true, canClimbTrees: true, tigerSound: 'roar!' }
