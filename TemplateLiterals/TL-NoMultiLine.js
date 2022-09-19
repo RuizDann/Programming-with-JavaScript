@@ -11,8 +11,16 @@ console.log("Did you know? " + noMultiLineString);
 // ES6 Multi-line Template Literals
 
 let multiLineString = `
+Using ES6
+backticks,
 Multi-line 
-strings 
-in 
-ES6`;
-console.log("Did you know? " + multiLineString);
+strings are
+possible!`;
+console.log(multiLineString);
+
+// ES6 variable interpolation
+
+let first = `He said, "Don't you know? ES6, it's got some great features!"`;
+let second = `"Wouldn't you want to learn more?", he asked.`;
+
+console.log(`${first} - and I got curious. ${second}`);
