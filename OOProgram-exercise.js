@@ -33,7 +33,7 @@ class Animal {
     isActive() {
         if (this.energy > 0) {
             this.energy -= 20;
-            console.log('Energy is decreasing, currently at: ', this.energy);
+            console.log('Energy is decreasing, currently at: ', this.energy, '\n');
         }
         else if (this.energy == 0) {
             this.sleep();
@@ -41,7 +41,7 @@ class Animal {
     }
     sleep() {
         this.energy += 20;
-        console.log('Energy is increasing, currently at: ', this.energy);
+        console.log('Energy is increasing, currently at: ', this.energy, '\n');
     }
     getColor() {
         return this.color;
@@ -120,13 +120,13 @@ fiji.makeSound(); // 'chirp'
 console.log(polly.color); // yellow
 console.log(polly.energy); // 100
 
-// polly.isActive(); // Energy is decreasing, currently at: 80
+polly.isActive(); // Energy is decreasing, currently at: 80
 
-// var penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
-// penguin; // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
+var penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
+console.log(penguin); // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
 
-// penguin.sound; // 'shriek'
-// penguin.canFly; // false
-// penguin.color; // 'black and white'
-// penguin.energy; // 200
-// penguin.isActive(); // Energy is decreasing, currently at: 180
+console.log(penguin.sound); // 'shriek'
+console.log(penguin.canFly); // false
+console.log(penguin.color); // 'black and white'
+console.log(penguin.energy); // 200
+penguin.isActive(); // Energy is decreasing, currently at: 180
