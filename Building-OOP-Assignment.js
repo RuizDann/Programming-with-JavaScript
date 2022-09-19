@@ -3,7 +3,28 @@
 // Code two methods in the Person class. Name those methods sleep() and doSomethingFun().
 // The sleep() method should take the existing energy level and increase it by 10.
 // The doSomethingFun() method should take the existing energy level and decrease it by 10.
+class Person {
+    constructor(name = 'Tom', age = 20, energy = 100) {
+        this.name = name;
+        this.age = age;
+        this.energy = energy;
+    }
 
+    sleep() {
+        this.energy += 10;
+        // console.log('Energy is increasing, currently at: ', this.energy, '\n');
+    }
+
+    doSomethingFun() {
+        if (this.energy > 0) {
+            this.energy -= 10;
+            // console.log('Energy is decreasing, currently at: ', this.energy, '\n');
+        }
+        else if (this.energy == 0) {
+            this.sleep();
+        }
+    }
+}
 
 
 // Task 2: Code a Worker class, a sub-class, inheriting from the Person class
