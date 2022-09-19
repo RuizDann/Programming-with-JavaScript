@@ -50,7 +50,7 @@ class Animal {
 
 //The Cat sub-class should have the following methods:
 class Cat extends Animal {
-    constructor(color, energy, sound = 'purr', canJumpHigh = true, canClimbTrees = true) {
+    constructor(sound = 'purr', canJumpHigh = true, canClimbTrees = true, color, energy) {
         super(color, energy);
         this.sound = sound;
         this.canJumpHigh = canJumpHigh;
@@ -62,7 +62,7 @@ class Cat extends Animal {
 }
 
 class Bird extends Animal {
-    constructor(color, energy, sound = 'chirp', canFly = true) {
+    constructor(sound = 'chirp', canFly = true, color, energy) {
         super(color, energy);
         this.sound = sound;
         this.canFly = canFly;
@@ -73,44 +73,60 @@ class Bird extends Animal {
 }
 
 class HouseCat extends Cat {
-    constructor(color, energy, sound, canJumpHigh, canClimbTrees, houseCatSound = 'meow') {
-        super(color, energy, sound, canJumpHigh, canClimbTrees);
+    constructor(houseCatSound = 'meow', sound, canJumpHigh, canClimbTrees, color, energy) {
+        super(sound, canJumpHigh, canClimbTrees, color, energy);
         this.houseCatSound = houseCatSound;
     }
-    makeSound(option) {
-        if (option) {
-            super.makeSound();
-        }
+    makeSound() {
+        super.makeSound();
         console.log(this.houseCatSound);
     }
 }
 
 class Tiger extends Cat {
-    constructor(color, energy, sound, canJumpHigh, CanClimbTrees, tigerSound = 'roar!') {
+    constructor(tigerSound = 'roar!', sound, canJumpHigh, CanClimbTrees, color, energy) {
         super(color, energy, sound, canJumpHigh, CanClimbTrees);
         this.tigerSound = tigerSound;
     }
-    makeSound(option) {
-        if (option) {
-            super.makeSound();
-        }
+    makeSound() {
+        super.makeSound();
         console.log(this.tigerSound);
     }
 }
 
 class Parrot extends Bird {
-    constructor(color, energy, sound, canFly, canTalk = false) {
+    constructor(canTalk = false, sound, canFly, color, energy) {
         super(color, energy, sound, canFly);
         this.canTalk = canTalk;
     }
-    makeSound(option) {
-        if (option) {
+    makeSound() {
+        if (this.canTalk == false) {
             super.makeSound();
         }
-        if (this.canTalk) {
+        else if (this.canTalk == true) {
+            super.makeSound();
             console.log("I'm a talking parrot!");
         }
     }
 }
 
 //Testing the code:
+var polly = new Parrot(true); // we're passing `true` to the constructor so that polly can talk
+var fiji = new Parrot(false); // we're passing `false` to the constructor so that fiji can't talk
+
+polly.makeSound(); // 'chirp', 'I'm a talking parrot!'
+fiji.makeSound(); // 'chirp'
+
+console.log(polly.color); // yellow
+console.log(polly.energy); // 100
+
+// polly.isActive(); // Energy is decreasing, currently at: 80
+
+// var penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
+// penguin; // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
+
+// penguin.sound; // 'shriek'
+// penguin.canFly; // false
+// penguin.color; // 'black and white'
+// penguin.energy; // 200
+// penguin.isActive(); // Energy is decreasing, currently at: 180
