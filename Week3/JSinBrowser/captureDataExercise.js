@@ -6,6 +6,7 @@
 // Task 2: Get h1 into a variable
 // Use the document.querySelector() method to query the h1 element on the page and assign it to the variable named h1.
 var h1 = document.querySelector('h1')
+
 // Task 3: Code an array
 // Declare a new variable, name it arr, and save the following array into it:
 var arr = ['Example Domain', 'First Click', 'Second Click', 'Third Click']
