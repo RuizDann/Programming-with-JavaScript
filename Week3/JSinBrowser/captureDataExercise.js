@@ -8,14 +8,8 @@
 var h1 = document.querySelector('h1')
 // Task 3: Code an array
 // Declare a new variable, name it arr, and save the following array into it:
+var arr = ['Example Domain', 'First Click', 'Second Click', 'Third Click']
 
-// [
-//     'Example Domain',
-//     'First Click',
-//     'Second Click',
-//     'Third Click'
-// ]
-// Reset
 // Task 4: Write a click-handling function
 // Write a new function declaration, named handleClicks. It should not accept any parameters.
 
