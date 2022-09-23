@@ -1,1 +1,31 @@
-Testing framework
+// JavaScript doesn't have built-in objects or methods that would allow for tests to be written
+// Many different libraries have been built to tackle the issue of testing
+
+// Other testing frameworks:
+    - Jasmine
+    - Mocha
+    - Karma
+    - qUnit
+
+// What is Jest:
+    - A JS testing framework
+    - often used for React(JS library by Meta)
+    - Able to test others:
+        - Babel
+        - TypeScript
+        - Node
+        - Angular
+        - Vue
+        - various others...
+    - supports code coverage (a measure of what percentage of code is covered by tests)
+        - higher coverage the lower chance of unidentified bugs
+
+// What is Mocking:
+    - allows you to separate the code that you are testing from it's related dependencies
+        - use mocking features to ensure unit testing is stand-alone
+    - In Jest you use mocking  
+        - by employing Jest mock functions
+        - makes it easy to test asynchronous code in Jest
+
+// Jest allows Snapshot testing:
+    -  Snapshot testing is used by developers to verify that there are no regressions in the DOM of our apps after some changes to the code base are made
