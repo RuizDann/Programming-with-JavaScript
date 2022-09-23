@@ -14,5 +14,15 @@ This is done without affecting the results that the code produces.
     - bug-free 
     - satisfies requirements
 
-// Types of testing:
-    - 
+// 3 most common types of testing:
+    - e2e (end to end) testing
+        - testing tries to imitate how a user might interact with your app
+        - slowest and take the most time to set up and run
+        - WebdriverJS, Protractor, Cypress
+    - integration testing
+        - testing how seperate parts of an app work together
+        - faster and cheaper than e2e testing, not as fast and cheap as unit testing
+        - React testing library, Enzyme
+    - unit testing
+        - the process of testing the smallests units of the source code in isolation such as functions
+        - self contained, fast, easy to write
