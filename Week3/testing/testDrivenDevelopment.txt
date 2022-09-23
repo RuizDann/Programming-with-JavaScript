@@ -1,0 +1,1 @@
+// streamlined process of writing code that will satisfy some requirements
