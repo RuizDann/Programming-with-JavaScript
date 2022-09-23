@@ -1,1 +1,7 @@
 // streamlined process of writing code that will satisfy some requirements
+
+//A software development teams work consists of the following:
+    - receiving requirements which will become a feature of the app that's being developed
+    - Writing a failing test for that to build feature before it gets built
+    - Making this failing test pass by coding that given feature
+
