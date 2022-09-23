@@ -1,10 +1,18 @@
-// If a test fails, then write the code to pass its test. 
-// Once my test passes, improve both the app's code and the test code, but without changing the behavior of either. 
-// Refactoring is the process in which I write my feature code so that it runs more efficiently or that it's easier to read and thus easier to understand for other programmers on the team. This is done without affecting the results that the code produces.
+If a test fails, then write the code to pass its test. 
+Once my test passes, improve both the app's code and the test code, but without changing the behavior of either. 
+Refactoring is the process in which I write my feature code to run more efficiently or easier to read and easier to understand for others on the team.
+This is done without affecting the results that the code produces.
 
 // TDD (Test-Driven Development) approach
-// you write a failing test
-// write source code so previously failing test now passes
-// optimize source code without changing its results
-// allows for repeatable code, automatic testing, and saves cost/time
+    - you write a failing test
+    - write source code so previously failing test now passes
+    - optimize source code without changing its results
+    - allows for repeatable code, automatic testing, and saves cost/time
 
+// Why test
+    - functionality intact
+    - bug-free 
+    - satisfies requirements
+
+// Types of testing:
+    - 
