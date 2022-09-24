@@ -5,3 +5,61 @@
     - Writing a failing test for that to build feature before it gets built
     - Making this failing test pass by coding that given feature
 
+// implementing TDD in code example:
+    - first write the test
+# this checks if it exists
+test('returns true if statusOfKeys exists', function() {
+    expect(statusOfKeys).toBeDefined()
+})
+# this will intially fail because it does not exist yet in the source code
+
+    - next create the function in the source code
+function statusOfKeys() {}
+# the tests passes because it confirms it exists
+# for this test to pass its enough to just declare a function with a name
+
+    - next you receive another requirement which is as follows:
+        -  accept a keys variable, which should be set to true and console log the keys variable.
+        - So the requirement states the status of keys function should accept a previously declared keys variable, which should be set to true.
+        - The status of keys should then console log the value of the keys variable
+
+const statusOfKeys = require('./statusOfKeys');
+const spyConsoleLog = jest.spyOn(console, 'log');
+spyConsoleLog.mockImplementation(keys => keys)
+
+test('returns true if statusOfKeys exists', function() {
+    expect(statusOfKeys).toBeDefined()
+})
+
+test('test console log inside statusOfKeys', function() {
+    statusOfKeys(true);
+    expect(console.log).toBeCalled()
+    expect(spyConsoleLog.mock.calls[0][0]).toBe(true)
+    spyConsoleLog.mockReset()
+    spyConsoleLog.mockRestore()
+})
+
+function statusOfKeys(keys) {
+    console.log(keys);
+}
+
+    - the test passes again with minimal code
+
+// the TDD way:
+    - Read new requirements
+    - write failing test
+    - update source code
+    - run test that passes
+    - refactor implementation
+
+// represented in three ways:
+    - RED: represents the failing tests
+    - GREEN: represents the passing tests after updates to the source code
+    - Refactor: represents final tweaks to code that don't change implementation details
+
+// TDD advantages:
+    - minimizing regressions (accidental bugs introduced to old code when coding a new requirement)
+    - provides proof that new implementations are not breaking the app
+    - Ability to automate tests to ensure system works as expected
+    - test implementations with various inputs
+    - test become documentation for new members on the team
