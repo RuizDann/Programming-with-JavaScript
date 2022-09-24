@@ -20,9 +20,21 @@ const dishData = [
 const tax = 1.20;
 
 // Implement getPrices()
-function getPrices() {
-    
+function getPrices(taxBoolean) {
+    for (var obj of dishData) {
+        var finalPrice;
+        if (taxBoolean == true) {
+            finalPrice = tax * obj.price
+            // console.log(finalPrice);
+        }
+        else if (taxBoolean == false) {
+            finalPrice = obj.price
+            // console.log(finalPrice);
+        }
+    }
 }
+taxBoolean = true;
+getPrices(taxBoolean);
 
 // Implement getDiscount()
 function getDiscount() {
