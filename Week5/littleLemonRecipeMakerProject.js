@@ -24,18 +24,18 @@ function getPrices(taxBoolean) {
     for (var obj of dishData) {
         var finalPrice;
         if (taxBoolean == true) {
-            finalPrice = tax * obj.price
+            finalPrice = tax * obj.price;
             // console.log(finalPrice);
         }
         else if (taxBoolean == false) {
-            finalPrice = obj.price
+            finalPrice = obj.price;
             // console.log(finalPrice);
         }
         else {
-            console.log("You need to pass a boolean to the getPrices call!")
+            console.log("You need to pass a boolean to the getPrices call!");
             return
         }
-        console.log(`Dish: ${obj.name}\nPrice: $${finalPrice}\n`)
+        console.log(`Dish: ${obj.name} Price: $${finalPrice}\n`);
     }
 }
 
@@ -57,7 +57,7 @@ function getDiscount(taxBoolean, guests) {
         console.log(`Discount is: $${discount}\n`);
     }
     else {
-        console.log("The second argument must be a number between 0 and 30\n")
+        console.log("The second argument must be a number between 0 and 30\n");
     }
 }
 
