@@ -48,10 +48,10 @@ function getDiscount(taxBoolean, guests) {
     var condition1 = typeof(guests) == 'number' && 0 < guests < 30;
     if (condition1 == true) {
         var discount = 0;
-        if (guest < 5) {
+        if (guests < 5) {
             discount = 5;
         }
-        else if (guest >= 5) {
+        else if (guests >= 5) {
             discount = 10;
         }
         console.log(`Discount is: $${discount}`);
