@@ -1,0 +1,9 @@
+https://developer.mozilla.org/en-US/docs/Learn/Server-side
+
+https://nodejs.org/api/documentation.html
+
+https://jestjs.io/
+
+https://www.npmjs.com/
+
+https://www.browserstack.com/guide/unit-testing-in-javascript
