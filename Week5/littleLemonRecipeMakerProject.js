@@ -31,9 +31,13 @@ function getPrices(taxBoolean) {
             finalPrice = obj.price
             // console.log(finalPrice);
         }
+        else {
+            console.log("You need to pass a boolean to the getPrices call!")
+            return
+        }
     }
 }
-taxBoolean = true;
+taxBoolean = 12;
 getPrices(taxBoolean);
 
 // Implement getDiscount()
