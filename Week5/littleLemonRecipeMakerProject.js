@@ -35,14 +35,33 @@ function getPrices(taxBoolean) {
             console.log("You need to pass a boolean to the getPrices call!")
             return
         }
+        console.log(`Dish: ${obj.name}\nPrice: $${finalPrice}\n`)
     }
 }
-taxBoolean = 12;
-getPrices(taxBoolean);
+
+// taxBoolean = true;
+// getPrices(taxBoolean);
 
 // Implement getDiscount()
-function getDiscount() {
-    
+function getDiscount(taxBoolean, guests) {
+    getPrices(taxBoolean);
+    var condition1 = typeof(guests) == 'number' && 0 < guests < 30;
+    if (condition1 == true) {
+        var discount = 0;
+        if (guest < 5) {
+            discount = 5;
+        }
+        else if (guest >= 5) {
+            discount = 10;
+        }
+        console.log(`Discount is: $${discount}`);
+    }
+    else {
+        console.log("The second argument must be a number between 0 and 30")
+    }
 }
 
 // Call getDiscount()
+
+getDiscount(true, 2)
+getDiscount(false, 10)
